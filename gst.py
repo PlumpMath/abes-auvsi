@@ -76,7 +76,8 @@ def main():
     parser.add_argument('--password',
                          required=True,
                          help='Password for interoperability.')
-    parser.add_argument('--spoofTelem')
+    parser.add_argument('--spoofTelem',
+                         help='Select this for random testing , press a key for sending telemetry once to server')
     parser.add_argument('--mavlink',
                         help='Required argument for accessing and forwarding telemetry data')
     args=parser.parse_args()
@@ -88,8 +89,8 @@ def main():
 
     if args.spoofTelem:
         spoofTelem(client)
-    #else:
-    #    proxy_mavlink(args.mavlink, client)
+    else:
+        proxy_mavlink(args.mavlink, client)
 
     while True:
         if raw_input():
