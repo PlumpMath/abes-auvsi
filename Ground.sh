@@ -26,3 +26,4 @@ python gst.py --url http://172.17.0.1:8000 --username testuser --password testpa
 
 # Created by Abhishek Chopra
 
+# now keep pressing enter in terminal to send new coordinates and see in web browser
